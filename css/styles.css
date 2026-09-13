@@ -86,3 +86,19 @@ body {
 text-decoration: none;
 color: rgb (32, 75, 89);
 }
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.formulario a{
+    color: #000;
+}
+
+.boton-link{
+    border: 1px solid #000;
+    background-color: rgba(227, 224, 224, 0.952);
+}
