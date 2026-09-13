@@ -102,3 +102,20 @@ color: rgb (32, 75, 89);
     border: 1px solid #000;
     background-color: rgba(227, 224, 224, 0.952);
 }
+
+.buscador{
+    display: flex;
+    align-items: center;
+}
+.resultados{
+        display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.detalle-producto{
+    text-align: center;
+}
+.aviso{
+    text-align: center;
+    color:#000;
+}
