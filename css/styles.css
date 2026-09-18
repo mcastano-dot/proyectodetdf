@@ -8,11 +8,15 @@
 .encabezado {
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
-    align-items:center;
-    background-color: #d4c2b0; 
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d1bea9;
+    padding: 10px 30px;
 }
-.encabezado img { width: 150px;}
+.encabezado img {
+    width: 150px;
+    height: auto;
+}
 .menu {
     display: flex;
     flex-direction: row;
@@ -21,16 +25,60 @@
 }
 .menu a {
     text-decoration: none;
-    color: #094459;
+    color: #1a475d;
+    font-weight: bold;
+}
+
+.encabezado form {
+    display: flex;
+    align-items: center;
+}
+
+.encabezado label {
+    color: #ffffff;
+    margin-right: 8px;
+}
+
+.encabezado button {
+    padding: 6px 12px;
+    background-color: #d4811b;
+    color: #ebf7fc;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.buscador {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 6px;
 }
 ul {
     list-style-type: none;
 }
 
 body {
-    background-color: rgb(249, 241, 231);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F4F6F9;
+    color: #333333;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
 }
 
+aside {
+    width: 20%;
+    padding: 20px;
+    background-color: #e6dbd1;
+    border-radius: 8px;
+    align-self: flex-start;
+}
+.contenido-principal {
+    width: 80%;
+    padding: 10px 20px;
+}
 .league-spartan {
   font-family: "League Spartan", sans-serif;
   font-optical-sizing: auto;
@@ -44,9 +92,7 @@ body {
   font-style: normal;
   color: #d4811b
 }
-.footer {
-    text-align: center;
-}
+
 .categorias {
  font-family: "Instrument Sans", sans-serif;
  font-weight: 400;
@@ -56,51 +102,92 @@ body {
 }
 .categorias a {
     text-decoration: none;
-    color: rgb(32, 75, 89) ;
+    color: rgb(11, 84, 109) ;
 }
 .categorias li {
     margin: 8px;
 }
-.navegacion.categorias {
-    background-color: #e6dbd1;
-
+.titulo-seccion {
+    color: #094459;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
 .productos {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 .producto {
-    width: 250px;
+    width: 18%;
     margin: 10px;
-    padding: 10px;
-    background-color: azure;
+    padding: 0 0 15px 0;
+    background-color: #ffffff;
+    border: 1px solid #e6dbd1;
+    border-radius: 8px;
     font-family: "League Spartan", sans-serif;
 }
-.producto img { 
-    width: 200px;
-}
 
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+.producto h3 {
+    margin: 15px 15px 10px 15px;
+    color: #094459;
+}
+.producto p {
+    margin: 10px 15px;
+}
 .producto a {
-text-decoration: none;
-color: rgb (32, 75, 89);
+    margin: 10px 15px;
+    text-decoration: none;
+    color: rgb(32, 75, 89);
 }
-
-.formulario{
+.caja-formulario {
+    background-color: rgba(230, 219, 209, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+}
+.caja-formulario div {
+    margin-bottom: 15px;
+}
+.caja-formulario input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.caja-formulario button {
+    padding: 8px 15px;
+    background-color: #d4811b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+.formulario {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 600px;
+    background-image: url("../img/fondologin.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .formulario a{
     color: #000;
 }
 
-.boton-link{
-    border: 1px solid #000;
-    background-color: rgba(227, 224, 224, 0.952);
+.boton-link {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #094459;
+    border-radius: 4px;
+    background-color: rgba(230, 219, 209, 0.5);
+    color: #094459;
 }
 
 .buscador{
@@ -118,4 +205,8 @@ color: rgb (32, 75, 89);
 .aviso{
     text-align: center;
     color:#000;
+}
+.footer {
+    text-align: center;
+    padding: 20px;
 }
