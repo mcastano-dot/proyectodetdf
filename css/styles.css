@@ -195,7 +195,7 @@ aside {
     align-items: center;
 }
 .resultados{
-        display: flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -210,27 +210,78 @@ aside {
     text-align: center;
     padding: 20px;
 }
-@media (max-width: 420px){
-    .productos{
+
+@media (max-width: 768px){
+    .encabezado{
+        flex-wrap: wrap;
+    }
+    .encabezado form{
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    main{
+        flex-direction: column;
+    }
+    aside{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contenido-principal{
+        width: 100%;
+    }
+    ul.categorias{
         display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .producto{
+        width: 44%;
+    }
+    .detalle-producto img{
+        max-width: 100%;
+    }
+    .caja-formulario{
+        width: 90%;
+        max-width: 400px;
+    }
 }
-.producto{
-    width: 90%;
-    margin: 20px;
-}
-.buscador{
-    width:100%;
-}
-.resultados{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.categorias{
-width: 100%;
-text-align: center;
-}
+
+@media (max-width: 420px) {
+    .encabezado{
+        flex-direction: column;
+        padding: 10px 15px;
+    }
+    .encabezado nav{
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .menu{
+        width: 100%;
+    }
+    .encabezado form{
+        flex-wrap: wrap;
+        margin-top: 0px;
+    }
+    .encabezado input{
+        width: 50%;
+    }
+    main{
+        padding: 10px;
+    }
+    .productos{
+        flex-direction: column;
+        align-items: center;
+    }
+    .resultados{
+        flex-direction: column;
+        align-items: center;
+    }
+    .producto{
+        width: 90%;
+        margin: 10px 0px;
+    }
+    .caja-formulario{
+        padding: 20px;
+    }
 }
