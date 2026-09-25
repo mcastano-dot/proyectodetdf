@@ -210,3 +210,27 @@ aside {
     text-align: center;
     padding: 20px;
 }
+@media (max-width: 420px){
+    .productos{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.producto{
+    width: 90%;
+    margin: 20px;
+}
+.buscador{
+    width:100%;
+}
+.resultados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.categorias{
+width: 100%;
+text-align: center;
+}
+}
