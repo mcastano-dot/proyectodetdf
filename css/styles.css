@@ -119,6 +119,9 @@ aside {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.productos-categoria .producto {
+    width: 22%;
+}
 .producto {
     display: flex;
     flex-direction: column;
@@ -270,7 +273,9 @@ aside {
         width: 18%;
         margin: 1%;
     }
-
+.productos-categoria .producto {
+    width: 22%;
+}
     .detalle-producto img {
         max-width: 100%;
     }
@@ -302,6 +307,9 @@ aside {
     .producto{
         width: 44%;
     }
+    .productos-categoria .producto {
+    width: 44%;
+}
     .detalle-producto img{
         max-width: 100%;
     }
@@ -345,6 +353,9 @@ aside {
         width: 90%;
         margin: 10px 0px;
     }
+    .productos-categoria .producto {
+    width: 90%;
+}
     .caja-formulario{
         padding: 20px;
     }
