@@ -15,7 +15,6 @@
 }
 .encabezado img {
     width: 150px;
-    height: auto;
 }
 .menu {
     display: flex;
@@ -136,7 +135,6 @@ aside {
 
 .producto img {
     width: 100%;
-    height: auto;
     border-radius: 8px 8px 0 0;
 }
 .producto h3 {
@@ -240,123 +238,94 @@ aside {
     text-decoration: none;
     border-radius: 6px;
 }
-@media (min-width: 769px) {
+@media (max-width: 768px) {
     .encabezado {
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-
-    main {
-        flex-direction: row;
-        padding: 20px;
-    }
-
-    aside {
-        width: 20%;
-    }
-
-    .contenido-principal {
-        width: 80%;
-    }
-
-    ul.categorias {
-        display: block;
-    }
-
-    .productos,
-    .resultados {
-        flex-direction: row;
         flex-wrap: wrap;
     }
 
-    .producto {
-        width: 18%;
-        margin: 1%;
-    }
-.productos-categoria .producto {
-    width: 22%;
-}
-    .detalle-producto img {
-        max-width: 100%;
-    }
-}
-@media (max-width: 768px){
-    .encabezado{
-        flex-wrap: wrap;
-    }
-    .encabezado form{
+    .encabezado form {
         width: 100%;
         justify-content: center;
         margin-top: 10px;
     }
-    main{
+
+    main {
         flex-direction: column;
     }
-    aside{
+
+    aside {
         width: 100%;
         margin-bottom: 20px;
     }
-    .contenido-principal{
+
+    .contenido-principal {
         width: 100%;
     }
-    ul.categorias{
+
+    ul.categorias {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .producto{
+
+    .producto {
+        width: 44%;
+        margin: 10px;
+    }
+
+    .productos-categoria .producto {
         width: 44%;
     }
-    .productos-categoria .producto {
-    width: 44%;
-}
-    .detalle-producto img{
-        max-width: 100%;
-    }
-    .caja-formulario{
+
+    .caja-formulario {
         width: 90%;
         max-width: 400px;
     }
 }
-
 @media (max-width: 420px) {
-    .encabezado{
+    .encabezado {
         flex-direction: column;
         padding: 10px 15px;
     }
-    .encabezado nav{
+
+    .encabezado nav {
         width: 100%;
-        margin: 10px 0px;
+        margin: 10px 0;
     }
-    .menu{
+
+    .menu {
         width: 100%;
     }
-    .encabezado form{
+
+    .encabezado form {
         flex-wrap: wrap;
-        margin-top: 0px;
+        margin-top: 0;
     }
-    .encabezado input{
+
+    .encabezado input {
         width: 50%;
     }
-    main{
+
+    main {
         padding: 10px;
     }
-    .productos{
+
+    .productos,
+    .resultados {
         flex-direction: column;
         align-items: center;
     }
-    .resultados{
-        flex-direction: column;
-        align-items: center;
-    }
-    .producto{
+
+    .producto {
         width: 90%;
-        margin: 10px 0px;
+        margin: 10px 0;
     }
+
     .productos-categoria .producto {
-    width: 90%;
-}
-    .caja-formulario{
+        width: 90%;
+    }
+
+    .caja-formulario {
         padding: 20px;
     }
 }
