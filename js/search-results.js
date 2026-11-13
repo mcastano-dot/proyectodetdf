@@ -1,16 +1,13 @@
-let FormBuscador = document.querySelector("form.buscador")
+let formBuscador = document.querySelector(".encabezado form");
+let campoBuscador = document.querySelector(".encabezado input");
+formBuscador.addEventListener("submit", function (e) {
+    e.preventDefault();       
 
-FormBuscador.addEventListener('submit', function (e) {
-    let inputBuscador = this.querySelector('input[name="búsqueda"]')
-    let textoBuscado = inputBuscador.value.trim ();
-
-
-if (textoBuscado === "") {
-    e.preventDefault ();
-    alert ("El campo de busqueda no puede estar vacio");
-
-} else if (textoBuscado.length < 3) {
-    e.preventDefault ();
-    alert("El campo buscado debe tener al menos 3 caracteres")
-}
-});
+    if (campoBuscador.value == "") {
+        alert("El campo de búsqueda no puede estar vacío");
+    } else if (campoBuscador.value.length < 3) {
+        alert("El término buscado debe tener al menos 3 caracteres");
+    } else {
+        this.submit();      
+    }
+})
