@@ -174,7 +174,6 @@ aside {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 600px;
     background-image: url("../img/fondologin.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -204,6 +203,9 @@ aside {
 }
 .detalle-producto{
     text-align: center;
+}
+.detalle-producto img {
+    max-width: 100%;
 }
 .aviso{
     text-align: center;
@@ -280,6 +282,9 @@ aside {
     .caja-formulario {
         width: 90%;
         max-width: 400px;
+    }
+      .formulario {
+        height: 600px;
     }
 }
 @media (max-width: 420px) {
