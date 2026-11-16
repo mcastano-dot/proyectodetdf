@@ -1,15 +1,22 @@
-let formBuscador = document.querySelector(".encabezado form");
-let campoBuscador = document.querySelector(".encabezado input");
-let errorBuscador = document.querySelector(".error-buscador");
 
-formBuscador.addEventListener("submit", function (e) {
+let formLogin = document.querySelector('form.caja-formulario');
+let inputEmail = document.querySelector('#mail');
+let inputPassword = document.querySelector('#password');
+
+formLogin.addEventListener('submit', function(e) {
     e.preventDefault();
-
-    if (campoBuscador.value == "") {
-        errorBuscador.innerText = "El campo de búsqueda no puede estar vacío";
-    } else if (campoBuscador.value.length < 3) {
-        errorBuscador.innerText = "El término buscado debe tener al menos 3 caracteres";
-    } else {
-        this.submit();
-    }
-})
+     if (inputEmail.value === "") {
+        alert("Ingresar un correo electrónico es obligatorio.");
+     }}
+     else if (inputPassword.value === "") {
+        alert("Ingresar una contraseña es obligatorio.");
+    } 
+    else if (inputPassword.value.length < 6) {
+        alert("La contraseña debe tener al menos 6 caracteres");
+    } 
+  else {
+    localStorage.setItem('userEmail', inputEmail.value);
+    this.submit();
+  };
+  
+g
