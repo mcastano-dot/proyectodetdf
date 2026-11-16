@@ -19,4 +19,3 @@ formLogin.addEventListener('submit', function(e) {
     this.submit();
   };
   
-g
