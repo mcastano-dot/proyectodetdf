@@ -16,7 +16,7 @@ let seccionSmartphones = document.querySelector(".smartphones");
 let seccionCocina = document.querySelector(".cocina");
 
 function mostrarCategoria(categoria, seccion) {
-    fetch('https://dummyjson.com/products/category/${categoria}')
+    fetch(`https://dummyjson.com/products/category/${categoria}`)
     .then(function(response) {
         return response.json();
     })
@@ -39,3 +39,6 @@ function mostrarCategoria(categoria, seccion) {
         console.log("El error es: " + error);
     })
 }
+
+mostrarCategoria("smartphones", seccionSmartphones);
+mostrarCategoria("kitchen-accessories", seccionCocina);
