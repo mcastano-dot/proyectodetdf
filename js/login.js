@@ -17,5 +17,6 @@ formLogin.addEventListener('submit', function(e) {
   else {
     localStorage.setItem('userEmail', inputEmail.value);
     this.submit();
-  };
+  }
+});
   
