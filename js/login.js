@@ -7,7 +7,7 @@ formLogin.addEventListener('submit', function(e) {
     e.preventDefault();
      if (inputEmail.value === "") {
         alert("Ingresar un correo electrónico es obligatorio.");
-     }}
+     }
      else if (inputPassword.value === "") {
         alert("Ingresar una contraseña es obligatorio.");
     } 
