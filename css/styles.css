@@ -341,4 +341,17 @@ aside {
     .caja-formulario {
         padding: 20px;
     }
+
+.error-mail{
+    color: red;
+}
+.error-pass {
+    color: red;
+}
+.error-pass2{
+    color: red;
+}
+.error-terminos {
+    color: red;
+}
 }
