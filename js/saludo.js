@@ -1,4 +1,4 @@
-let userEmail = localStorage.getItem('userEmail');
+ let userEmail = localStorage.getItem('userEmail');
 if (userEmail !== null) {
     let menu = document.querySelector('.menu');
  menu.innerHTML = `

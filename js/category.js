@@ -1,7 +1,6 @@
 let formBuscador = document.querySelector(".encabezado form");
 let campoBuscador = document.querySelector(".encabezado input");
 let errorBuscador = document.querySelector(".error-buscador");
-
 formBuscador.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -16,15 +15,28 @@ formBuscador.addEventListener("submit", function (e) {
 let queryString = location.search;
 let queryStringObj = new URLSearchParams(queryString);
 let categoria = queryStringObj.get("categoria");
-console.log(categoria);
 let titulo = document.querySelector(".contenido-principal h2");
 titulo.innerText = `Categoría: ${categoria}`;
-fetch (`https://dummyjson.com/products/category/${categoria}`)
+let seccionProductos = document.querySelector(".productos-categoria");
+
+fetch(`https://dummyjson.com/products/category/${categoria}`)
 .then(function(response){
     return response.json();
 })
 .then(function(data){
-    console.log(data);
+    let productos = data.products;
+
+    for (let i = 0; i < productos.length; i++) {
+        seccionProductos.innerHTML += `
+        <article class="producto">
+            <img src="${productos[i].thumbnail}" alt="${productos[i].title}">
+            <h3>${productos[i].title}</h3>
+            <p>${productos[i].description}</p>
+            <p>Precio: $${productos[i].price}</p>
+            <a class="boton-general" href="./product.html?id=${productos[i].id}">Ver detalle</a>
+        </article>
+        `;
+    }
 })
 .catch(function(error){
     console.log("El error es: " + error);

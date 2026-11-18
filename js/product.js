@@ -1,10 +1,23 @@
-let queryString = location.search; 
-let queryStringObj = new URLsearchParams(queryString);
-let idProducto = params.get('id'); 
+let formBuscador = document.querySelector(".encabezado form");
+let campoBuscador = document.querySelector(".encabezado input");
+let errorBuscador = document.querySelector(".error-buscador");
 
+formBuscador.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    if (campoBuscador.value == "") {
+        errorBuscador.innerText = "El campo de búsqueda no puede estar vacío";
+    } else if (campoBuscador.value.length < 3) {
+        errorBuscador.innerText = "El término buscado debe tener al menos 3 caracteres";
+    } else {
+        this.submit();
+    }
+})
+let queryString = location.search;
+let queryStringObj = new URLSearchParams(queryString);
+let idProducto = queryStringObj.get('id');
 let seccionDetalle = document.querySelector('.detalle-producto');
 let seccionReviews = document.querySelector('.rewiews');
-
 fetch (`https://dummyjson.com/products/${idProducto}`)
 .then(function(response) {
         return response.json();
@@ -31,8 +44,6 @@ let tagsHTML = '';
                 ${tagsHTML}
             </ul>
         `;
-
-
         let reviewsHTML = '<h1 class="categorias"><em>Reseñas de clientes</em></h1>';
         
         if (product.reviews) {
@@ -46,7 +57,6 @@ let tagsHTML = '';
                 `;
             }
         }
-
         seccionReviews.innerHTML = reviewsHTML;
 
     })

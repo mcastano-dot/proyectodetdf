@@ -1,7 +1,6 @@
 let formBuscador = document.querySelector(".encabezado form");
 let campoBuscador = document.querySelector(".encabezado input");
 let errorBuscador = document.querySelector(".error-buscador");
-
 formBuscador.addEventListener("submit", function (e) {
     e.preventDefault();
 
