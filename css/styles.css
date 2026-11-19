@@ -216,7 +216,9 @@ aside {
     color:#000;
 }
 .sin-resultados {
-    display: none;
+    text-align: center;
+    color: #094459;
+    font-weight: bold;
 }
 .footer {
     text-align: center;

@@ -29,3 +29,36 @@ fetch("https://dummyjson.com/products/categories")
 let queryString = location.search;
 let queryStringObj = new URLSearchParams(queryString);
 let busqueda = queryStringObj.get("busqueda");
+
+let titulo = document.querySelector(".contenido-principal h2");
+let sinResultados = document.querySelector(".sin-resultados");
+let seccionResultados = document.querySelector(".resultados");
+
+titulo.innerText = `Resultados de búsqueda para: ${busqueda}`;
+
+fetch(`https://dummyjson.com/products/search?q=${busqueda}`)
+.then(function(response){
+    return response.json();
+})
+.then(function(data){
+    let productos = data.products;
+
+    if(productos.length == 0) {
+        sinResultados.innerText = `No hay resultados para el término: ${busqueda}`;
+    } else {
+        for(let i = 0; i < productos.length; i++) {
+            seccionResultados.innerHTML += `
+            <article class="producto">
+            <img src="${productos[i].thumbnail}" alt="${productos[i].title}">
+            <h3>${productos[i].title}</h3>
+            <p>${productos[i].description}</p>
+            <p>Precio: $${productos[i].price}</p>
+            <a class="boton-general" href="./product.html?id=${productos[i].id}">Ver detalle</a>
+            </article>
+            `;
+        }
+    }
+})
+.catch(function(error){
+    console.log("El error es: " + error);
+})
