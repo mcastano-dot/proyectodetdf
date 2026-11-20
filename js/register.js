@@ -24,9 +24,6 @@ else if (inputPass.value === "") {
      else if (inputPass.value !== inputPass2.value) {
         errorPass2.innerText = "Las contraseñas no coinciden";
     } 
-     else if (checkTerminos.checked === false) {
-        errorTerminos.innerText = "Debes aceptar los términos y condiciones para continuar.";
-    } 
      else {
         this.submit();
     }
