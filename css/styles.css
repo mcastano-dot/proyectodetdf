@@ -30,6 +30,9 @@
 .menu li {
     margin: 0 10px;
 }
+.menu.saludo1{
+    margin-left: 40px;
+}
 .encabezado form {
     width: 25%;
     display: flex;
@@ -266,10 +269,12 @@ aside {
 }
 
 .saludo1{
-    display: flex;
-    justify-content: center;
+    display: block;
+    border: 1px solid black;
     border-radius: 6px;
-    color: red;
+    color:darkcyan;
+    padding: 30px; 
+    background-color:#e1d3c3;
 }
 
 @media (max-width: 768px) {
